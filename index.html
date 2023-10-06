@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treact Project</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js"
+    crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
   </head>
 
+<main>
   <body>
     <section id="nav">
       <nav>
@@ -25,25 +30,43 @@
               <a href="#blog" class="nav__link">Blog</a>
               <a href="#pricing" class="nav__link">Pricing</a>
               <a href="#contact" class="nav__link">Contact Us</a>
-              <a href="#login" class="nav__link">Login</a>
+              <a href="#login" class="nav__link--login">Login</a>
               <a href="#" class="sign__up--btn sign__up--btn-text">Sign Up</a>
             </li>
           </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="#" class="menu__link">About</a></li>
+            <li class="menu__list"><a href="#" class="menu__link">Blog</a></li>
+            <li class="menu__list"><a href="#" class="menu__link">Pricing</a></li>
+            <li class="menu__list"><a href="#" class="menu__link">Contact Us</a></li>
+            <li class="menu__list"><a href="#" class="menu__link">Login</a></li>
+            <li class="menu__list"><a href="#" class="menu__link sign__up--btn-menu sign__up--btn-text">Sign Up</a></li>
+          </ul>
         </div>
+      </div>
       </nav>
     </section>
 
+
     <section id="landing">
-      <header>
-        <div class="row">
+      <div class="container">
+        <div class="row section__wrapper">
           <div class="header">
-            <h1>
-              Beautiful React Templates <span class="purple">for you.</span>
-            </h1>
-            <p>
+            <div class="header__description">
+              <h1>
+                Beautiful React Templates <span class="purple">for you.</span>
+              </h1>
+              <p>
               Our templates are easy to setup, understand and customize. Fully
               modular components with a variety of pages and components.
-            </p>
+              </p>
             <div class="get__started--container">
               <input type="text" placeholder="Your E-mail Address" class="input">
               <button class="get__started--btn">Get Started</button>
@@ -53,20 +76,22 @@
               <img src="./Assests/customers-logo-strip.680ac7c2e8ae28161d2c.png" class="customers" alt="">
             </div>
             </div>
+            <div class="header__img">
               <figure class="header__img--container">
                 <img src="./Assests/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="" class="header__img">
               </figure>
             </div>
+            </div>
           </div>  
         </div>
-      </header>
+      </div>
     </section>    
 
 
     <section id="features">
       <div class="container">
         <div class="row">
-          <div class="section__header center__wrapper">
+          <div class="section__header--features center__wrapper">
             <span class="features__heading--title purple">FEATURES</span>
             <h2>
               We have Amazing <span class="purple">Service.</span>
@@ -156,7 +181,7 @@
 
     <section id="quality">
       <div class="container">
-        <div class="row quality__wrapper">
+        <div class="row section__wrapper">
           <div class="section__header">
             <span class="section__header--title purple"> QUALITY WORK
             </span>
@@ -166,7 +191,11 @@
               <p class="section__header--para">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-              <a href="https://timerse.com" class="section__btn">Learn More</a>
+              <span>
+                <button class="section__btn">
+                  <a href="https://timerse.com" >Learn More</a>
+                </button>
+              </span>
             </div>
           <figure class="section__header--img">
             <img src="./Assests/hero-screenshot-1.40a097b525c2f8c9808e.png" alt="">
@@ -252,7 +281,7 @@
               </div>
             </div>
             <span>
-              <button class="section__btn">Leanr More</button>
+              <button class="section__btn">Learn More</button>
             </span>
           </div>
           <figure class="half section__img">
@@ -265,12 +294,12 @@
     <section id="Pricing">
       <div class="container">
         <div class="row">
-          <div class="section__header center__wrapper">
+          <div class="section__header--pricing center__wrapper">
             <span class="features__heading--title purple">PRICING</span>
             <h2>
               Reasonable & Flexible <span class="purple">Plans.</span>
             </h2>
-            <p class="section__header--para">
+            <p class="pricing__para">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
@@ -382,14 +411,180 @@
     <section id="faqs">
       <div class="container">
         <div class="row">
-          <div class="section__header center__wrapper">
+          <div class="section__header--faqs center__wrapper">
             <span class="features__heading--title purple">FAQS</span>
             <h2>You have <span class="purple">Questions ?</span></h2>
-            <p class="section__header--para">And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="faqs__para">And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-          <div class="quesions">
-            <div class="question">
-              
+          <div class="faq__quesions">
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">Are all the templates easily customizable ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">How long do you usaully support an standalone template for ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">What kind of payment methods do you accept ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">Is there a subscription service to get the lastest templates ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">Are the templates compatible with the React ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+            <div class="faq__question">
+              <div class="faq__question--wrapper">
+                <h3 class="faq__name">Do you really support Internet Explore 11 ?</h3>
+                <figure>
+                  <img class="faq__arrow" src="/Assests/chevron-down-arrow.svg" alt="down arrow">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="getstarted">
+      <div class="container">
+        <div class="row">
+          <div class="getstarted__wrapper">
+            <h1 class="getstarted__text">
+              Developers all over the world are happily using Treact.
+            </h1>
+            <div class="get__started--btns">
+              <button class="get__started--btn-red">
+                Get Started
+              </button>
+              <button class="get__started--btn-purple">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer__wrapper">
+            <div class="footer_-column--container">
+            <div class="footer__column">
+              <h1 class="footer__title">
+                  MAIN
+              </h1>
+                <ul class="footer__links">
+                  <li>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">FAQs</a>
+                    <a href="" class="footer__link">Support</a>
+                    <a href="" class="footer__link">About Us</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+              <h1 class="footer__title">
+                  PRODUCT
+              </h1>
+                <ul class="footer__links">
+                  <li>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">FAQs</a>
+                    <a href="" class="footer__link">Support</a>
+                    <a href="" class="footer__link">About Us</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+              <h1 class="footer__title">
+                  PRESS
+              </h1>
+                <ul class="footer__links">
+                  <li>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">FAQs</a>
+                    <a href="" class="footer__link">Support</a>
+                    <a href="" class="footer__link">About Us</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+              <h1 class="footer__title">
+                  TEAM
+              </h1>
+                <ul class="footer__links">
+                  <li>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">FAQs</a>
+                    <a href="" class="footer__link">Support</a>
+                    <a href="" class="footer__link">About Us</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+              <h1 class="footer__title">
+                  LEGAL
+              </h1>
+                <ul class="footer__links">
+                  <li>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">FAQs</a>
+                    <a href="" class="footer__link">Support</a>
+                    <a href="" class="footer__link">About Us</a>
+                  </li>
+                </ul>
+            </div>
+            </div>
+            <div class="horizontal__line"></div>
+            <div class="footer__info">
+              <div class="logo__container--footer">
+                <img
+                class="logo"
+                src="./Assests/white logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
+                alt="Treact Logo"
+                />
+                Treact Inc.
+              </div>
+              <p class="copyright">© 2018 Treact Inc. All Rights Reserved.</p>
+              <div class="footer__icon--wrapper">
+                <a href="https://facebook.com">
+                  <img src="/Assests/facebook-f.svg" class="footer__icon--link" alt="Facebook Logo">
+                </a>
+                <a href="https://twitter.com">
+                  <img src="/Assests/twitter.svg" class="footer__icon--link" alt="Twitter Logo">
+                </a>
+                <a href="https://youtube.com">
+                  <img src="/Assests/youtube.svg" class="footer__icon--link" alt="Youtube Logo">
+                </a>
+              </div>
             </div>
           </div>
         </div>
